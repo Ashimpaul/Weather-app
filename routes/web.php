@@ -9,6 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/weather/{city?}',[WeatherController::class, 'fetchWeather'])->name('weather');
+Route::get('/places', [WeatherController::class, 'places'])->name('places');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
